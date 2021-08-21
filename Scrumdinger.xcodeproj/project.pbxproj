@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D240AB1F26CE4409007BDC97 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D240AB1E26CE4409007BDC97 /* EditView.swift */; };
 		D244122726BC2CCE004865D6 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244122626BC2CCE004865D6 /* DailyScrum.swift */; };
 		D244122926BC2F15004865D6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244122826BC2F15004865D6 /* CardView.swift */; };
 		D27D476E26BFEC07009E6512 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27D476D26BFEC07009E6512 /* ScrumsView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D240AB1E26CE4409007BDC97 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		D244122626BC2CCE004865D6 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		D244122826BC2F15004865D6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D27D476D26BFEC07009E6512 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D244122826BC2F15004865D6 /* CardView.swift */,
 				D27D476D26BFEC07009E6512 /* ScrumsView.swift */,
 				D27D477126C01881009E6512 /* DetailView.swift */,
+				D240AB1E26CE4409007BDC97 /* EditView.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				D2F4E9B626BBD12F00D0CE9D /* MeetingView.swift in Sources */,
 				D27D476E26BFEC07009E6512 /* ScrumsView.swift in Sources */,
+				D240AB1F26CE4409007BDC97 /* EditView.swift in Sources */,
 				D244122726BC2CCE004865D6 /* DailyScrum.swift in Sources */,
 				D27D477226C01881009E6512 /* DetailView.swift in Sources */,
 				D244122926BC2F15004865D6 /* CardView.swift in Sources */,
