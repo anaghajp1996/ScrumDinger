@@ -86,6 +86,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D292D992283599050088F515 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D292D98E2835795E0088F515 /* Theme.swift */,
+				D244122626BC2CCE004865D6 /* DailyScrum.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D292D9932835991D0088F515 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D27D476D26BFEC07009E6512 /* ScrumsView.swift */,
+				D244122826BC2F15004865D6 /* CardView.swift */,
+				D27D477126C01881009E6512 /* DetailView.swift */,
+				D292D990283588E40088F515 /* DetailEditView.swift */,
+				D2F4E9B526BBD12F00D0CE9D /* MeetingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D2F4E9A726BBD12F00D0CE9D = {
 			isa = PBXGroup;
 			children = (
@@ -109,18 +130,13 @@
 		D2F4E9B226BBD12F00D0CE9D /* Scrumdinger */ = {
 			isa = PBXGroup;
 			children = (
+				D292D9932835991D0088F515 /* Views */,
+				D292D992283599050088F515 /* Models */,
 				D2F4E9B326BBD12F00D0CE9D /* ScrumdingerApp.swift */,
-				D2F4E9B526BBD12F00D0CE9D /* MeetingView.swift */,
 				D2F4E9B726BBD13000D0CE9D /* Assets.xcassets */,
 				D2F4E9BC26BBD13000D0CE9D /* Info.plist */,
 				D27D476F26BFF0CE009E6512 /* Color+Codable.swift */,
 				D2F4E9B926BBD13000D0CE9D /* Preview Content */,
-				D244122626BC2CCE004865D6 /* DailyScrum.swift */,
-				D244122826BC2F15004865D6 /* CardView.swift */,
-				D27D476D26BFEC07009E6512 /* ScrumsView.swift */,
-				D27D477126C01881009E6512 /* DetailView.swift */,
-				D292D98E2835795E0088F515 /* Theme.swift */,
-				D292D990283588E40088F515 /* DetailEditView.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
