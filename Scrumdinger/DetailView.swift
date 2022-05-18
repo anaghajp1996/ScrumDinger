@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     let scrum: DailyScrum
-    @State private var isPresented = false
+    @State private var isPresentingEditView = false
     var body: some View {
         List {
             Section(header: Text("Meeting Info")) {
@@ -23,36 +23,43 @@ struct DetailView: View {
                     Text("\(scrum.lengthInMinutes) minutes")
                 }
                 HStack {
-                    Label("Color", systemImage: "paintpalette")
+                    Label("Theme", systemImage: "paintpalette")
                     Spacer()
-                    Image(systemName: "checkmark.circle.fill").foregroundColor(scrum.color)
+                    Image(systemName: "checkmark.circle.fill").foregroundColor(scrum.theme.mainColor)
                 }
                 .accessibilityElement(children: .ignore)
             }
             Section(header: Text("Attendees")) {
-                ForEach(scrum.attendees, id: \.self) { attendee in
-                    Label(attendee, systemImage: "person")
+                ForEach(scrum.attendees) { attendee in
+                    Label(attendee.name, systemImage: "person")
                         .accessibilityLabel(Text("Person"))
-                        .accessibilityValue(Text(attendee))
                 }
             }
         }
-        .listStyle(InsetGroupedListStyle())
         .navigationTitle(scrum.title)
-        .fullScreenCover(isPresented: $isPresented) {
-            NavigationView {
-                EditView()
-                    .navigationTitle(Text(scrum.title))
-                    .navigationBarItems(leading: Button("Cancel") {
-                        isPresented = false
-                    },trailing: Button("Done") {
-                        isPresented = false
-                    })
+        .toolbar {
+            Button("Edit") {
+                isPresentingEditView = true
             }
         }
-        .navigationBarItems(trailing: Button("Edit") {
-            isPresented = true
-        })
+        .sheet(isPresented: $isPresentingEditView) {
+            NavigationView {
+                DetailedEditView()
+                    .navigationTitle(scrum.title)
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("Cancel") {
+                                isPresentingEditView = false
+                            }
+                        }
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Done") {
+                                isPresentingEditView = false
+                            }
+                        }
+                    }
+            }
+        }
     }
 }
 

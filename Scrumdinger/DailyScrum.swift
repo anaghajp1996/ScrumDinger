@@ -10,38 +10,49 @@ import SwiftUI
 struct DailyScrum: Identifiable {
     let id: UUID
     var title: String
-    var attendees: [String]
+    var attendees: [Attendee]
     var lengthInMinutes: Int
-    var color: Color
+    var theme: Theme
     
-    init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, color: Color) {
+    init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
         self.title = title
-        self.attendees = attendees
+        self.attendees = attendees.map {Attendee(name: $0)}
         self.lengthInMinutes = lengthInMinutes
-        self.color = color
+        self.theme = theme
     }
+}
+
+extension DailyScrum {
+    struct Attendee: Identifiable {
+        let id: UUID
+        var name: String
+        
+        init(id: UUID = UUID(), name: String) {
+            self.id = id
+            self.name = name
+        }
+    }
+    
+    struct Data {
+        var title: String = ""
+        var attendees: [Attendee] = []
+        var lengthInMinutes: Double = 5
+        var theme: Theme = .seafoam
+    }
+    
+    var data: Data {
+        Data(title: title, attendees: attendees, lengthInMinutes: Double(lengthInMinutes), theme: theme)
+    }
+    
 }
 
 extension DailyScrum {
     static var data: [DailyScrum] {
         [
-            DailyScrum(title: "Design", attendees: ["Stark", "Rogers", "Odinson"], lengthInMinutes: 10, color: Color.red),
-            DailyScrum(title: "App Dev", attendees: ["Banner", "Romonoff", "Barton"], lengthInMinutes: 20, color: Color.blue),
-            DailyScrum(title: "Web Dev", attendees: ["Danvers", "Barnes", "Maximoff"], lengthInMinutes: 15, color: Color.orange),
+            DailyScrum(title: "Design", attendees: ["Stark", "Rogers", "Odinson"], lengthInMinutes: 10, theme: .yellow),
+            DailyScrum(title: "App Dev", attendees: ["Banner", "Romonoff", "Barton"], lengthInMinutes: 20, theme: .orange),
+            DailyScrum(title: "Web Dev", attendees: ["Danvers", "Barnes", "Maximoff"], lengthInMinutes: 15, theme: .poppy),
         ]
-    }
-}
-
-extension DailyScrum {
-    struct Data {
-        var title: String = ""
-        var attendees: [String] = []
-        var lengthInMinutes: Double = 5.0
-        var color: Color = .random
-    }
-    
-    var data: Data {
-        return Data(title: title, attendees: attendees, lengthInMinutes: Double(lengthInMinutes), color: color)
     }
 }
