@@ -5,7 +5,7 @@
 //  Created by Anagha K J on 05/08/21.
 //
 
-import SwiftUI
+import Foundation
 
 struct DailyScrum: Identifiable {
     let id: UUID
@@ -17,7 +17,7 @@ struct DailyScrum: Identifiable {
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
         self.title = title
-        self.attendees = attendees.map {Attendee(name: $0)}
+        self.attendees = attendees.map { Attendee(name: $0) }
         self.lengthInMinutes = lengthInMinutes
         self.theme = theme
     }
@@ -45,14 +45,19 @@ extension DailyScrum {
         Data(title: title, attendees: attendees, lengthInMinutes: Double(lengthInMinutes), theme: theme)
     }
     
+    mutating func update(from data: Data) {
+        title = data.title
+        attendees = data.attendees
+        lengthInMinutes = Int(data.lengthInMinutes)
+        theme = data.theme
+    }
 }
 
 extension DailyScrum {
-    static var data: [DailyScrum] {
-        [
-            DailyScrum(title: "Design", attendees: ["Stark", "Rogers", "Odinson"], lengthInMinutes: 10, theme: .yellow),
-            DailyScrum(title: "App Dev", attendees: ["Banner", "Romonoff", "Barton"], lengthInMinutes: 20, theme: .orange),
-            DailyScrum(title: "Web Dev", attendees: ["Danvers", "Barnes", "Maximoff"], lengthInMinutes: 15, theme: .poppy),
-        ]
-    }
+    static let data: [DailyScrum] =
+    [
+        DailyScrum(title: "Design", attendees: ["Stark", "Rogers", "Odinson"], lengthInMinutes: 10, theme: .yellow),
+        DailyScrum(title: "App Dev", attendees: ["Banner", "Romonoff", "Barton"], lengthInMinutes: 20, theme: .orange),
+        DailyScrum(title: "Web Dev", attendees: ["Danvers", "Barnes", "Maximoff"], lengthInMinutes: 15, theme: .poppy),
+    ]
 }
