@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D2053CD128368BE10085FAFB /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2053CD028368BE10085FAFB /* ThemePicker.swift */; };
+		D23BC9DF2863AE0400BCD75D /* ScrumProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23BC9DE2863AE0400BCD75D /* ScrumProgressViewStyle.swift */; };
 		D244122726BC2CCE004865D6 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244122626BC2CCE004865D6 /* DailyScrum.swift */; };
 		D244122926BC2F15004865D6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244122826BC2F15004865D6 /* CardView.swift */; };
 		D27D476E26BFEC07009E6512 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27D476D26BFEC07009E6512 /* ScrumsView.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		D2053CD028368BE10085FAFB /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		D23BC9DE2863AE0400BCD75D /* ScrumProgressViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrumProgressViewStyle.swift; sourceTree = "<group>"; };
 		D244122626BC2CCE004865D6 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		D244122826BC2F15004865D6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D27D476D26BFEC07009E6512 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		D292D9932835991D0088F515 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D23BC9DE2863AE0400BCD75D /* ScrumProgressViewStyle.swift */,
 				D27D476D26BFEC07009E6512 /* ScrumsView.swift */,
 				D244122826BC2F15004865D6 /* CardView.swift */,
 				D27D477126C01881009E6512 /* DetailView.swift */,
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2053CD128368BE10085FAFB /* ThemePicker.swift in Sources */,
+				D23BC9DF2863AE0400BCD75D /* ScrumProgressViewStyle.swift in Sources */,
 				D292D98F2835795E0088F515 /* Theme.swift in Sources */,
 				D2F4E9B626BBD12F00D0CE9D /* MeetingView.swift in Sources */,
 				D27D476E26BFEC07009E6512 /* ScrumsView.swift in Sources */,
