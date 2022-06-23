@@ -18,16 +18,17 @@ struct MeetingView: View {
             VStack {
                 MeetingHeaderView(secondsElapsed: scrumTimer.secondsElapsed, secondsRemaining: scrumTimer.secondsRemaining, theme: scrum.theme)
                 Circle().strokeBorder(lineWidth: 24, antialiased: true)
-                HStack {
-                    Text("Speaker 1 of 3")
-                    Spacer()
-                    Button(action: {}) {
-                        Image(systemName: "forward.fill")
-                    }.accessibilityLabel("Next Speaker")
-                }
+                MeetingFooterView(speakers: scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
             }
         }.padding()
             .foregroundColor(scrum.theme.accentColor)
+            .onAppear(perform: {
+                scrumTimer.reset(lengthInMinutes: scrum.lengthInMinutes, attendees: scrum.attendees)
+                scrumTimer.startScrum()
+            })
+            .onDisappear(perform: {
+                scrumTimer.stopScrum()
+            })
             .navigationBarTitleDisplayMode(.inline)
     }
 }
