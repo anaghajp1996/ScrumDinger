@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D2053CD128368BE10085FAFB /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2053CD028368BE10085FAFB /* ThemePicker.swift */; };
+		D2199F452864ADD9009FD0B8 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2199F432864ADD9009FD0B8 /* AVPlayer+Ding.swift */; };
+		D2199F462864ADD9009FD0B8 /* ScrumTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2199F442864ADD9009FD0B8 /* ScrumTimer.swift */; };
 		D23BC9DF2863AE0400BCD75D /* ScrumProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23BC9DE2863AE0400BCD75D /* ScrumProgressViewStyle.swift */; };
 		D244122726BC2CCE004865D6 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244122626BC2CCE004865D6 /* DailyScrum.swift */; };
 		D244122926BC2F15004865D6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244122826BC2F15004865D6 /* CardView.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		D2053CD028368BE10085FAFB /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		D2199F432864ADD9009FD0B8 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
+		D2199F442864ADD9009FD0B8 /* ScrumTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrumTimer.swift; sourceTree = "<group>"; };
 		D23BC9DE2863AE0400BCD75D /* ScrumProgressViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrumProgressViewStyle.swift; sourceTree = "<group>"; };
 		D244122626BC2CCE004865D6 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		D244122826BC2F15004865D6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		D292D992283599050088F515 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2199F432864ADD9009FD0B8 /* AVPlayer+Ding.swift */,
+				D2199F442864ADD9009FD0B8 /* ScrumTimer.swift */,
 				D292D98E2835795E0088F515 /* Theme.swift */,
 				D244122626BC2CCE004865D6 /* DailyScrum.swift */,
 			);
@@ -317,6 +323,8 @@
 				D244122726BC2CCE004865D6 /* DailyScrum.swift in Sources */,
 				D27D477226C01881009E6512 /* DetailView.swift in Sources */,
 				D244122926BC2F15004865D6 /* CardView.swift in Sources */,
+				D2199F462864ADD9009FD0B8 /* ScrumTimer.swift in Sources */,
+				D2199F452864ADD9009FD0B8 /* AVPlayer+Ding.swift in Sources */,
 				D292D991283588E40088F515 /* DetailEditView.swift in Sources */,
 				D27D477026BFF0CE009E6512 /* Color+Codable.swift in Sources */,
 				D292D995283599550088F515 /* ThemeView.swift in Sources */,
