@@ -10,4 +10,11 @@ extension AVPlayer {
         guard let url = Bundle.main.url(forResource: "ding", withExtension: "wav") else { fatalError("Failed to find sound file.") }
         return AVPlayer(url: url)
     }()
+    
+    var player: AVPlayer {
+        try? AVAudioSession.sharedInstance().setCategory(.playback)
+        return AVPlayer.sharedDingPlayer
+    }
 }
+
+
